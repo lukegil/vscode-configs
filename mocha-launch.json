@@ -1,0 +1,56 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha All",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
+      "args": ["--runInBand"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/mocha/bin/mocha"
+      },
+      "runtimeVersion": "10.18.0"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha Subdir",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
+      "args": ["--recursive", "dir/subdir", "--exit"],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/jest/bin/jest"
+      },
+      "runtimeVersion": "10.18.0"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha Current File",
+      "runtimeVersion": "10.18.0",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/mocha",
+      "args": [
+        "${workspaceFolder}/${relativeFile}",
+        "--detectOpenHandles",
+        "--timeout",
+        "50000"
+      ],
+      "console": "integratedTerminal",
+      "outputCapture": "std",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "windows": {
+        "program": "${workspaceFolder}/node_modules/mocha/bin/mocha"
+      },
+      "env": {
+        "LOG_LEVEL": "some-level"
+      }
+    }
+  ]
+}

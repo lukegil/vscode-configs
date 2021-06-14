@@ -1,0 +1,34 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "node-launch",
+      "program": "${workspaceFolder}/index.js",
+      "outputCapture": "std",
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "some-env",
+        "LOG_LEVEL": "debug"
+      },
+      "runtimeVersion": "14.2.0"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Node JS current file",
+      "program": "${file}",
+      "args": [],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "disableOptimisticBPs": true,
+      "env": {
+        "NODE_ENV": "some-env",
+        "LOG_LEVEL": "debug"
+      },
+      "runtimeVersion": "14.2.0"
+    }
+  ]
+}
